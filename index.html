@@ -4,15 +4,29 @@
     </head>
     <body>
         <h1>PyScript tests</h1>
-        <h2>Author: Johannes Nicholas</h2>
-        <p id="player">Player: You</p>
+        <p>Author: Johannes Nicholas</p>
+        <h2 id="player">Player: You</h2>
         <br>
-        <button>Set name</button>
+        <button 
+            style="background-color:rgb(190, 157, 220)" 
+            id="set" 
+            type="button" 
+            pys-onClick="set">
+                Set name
+        </button>
+        <p>Loading...</p>
 
     <py-script> 
-x = input("Please enter your name: ")
-print("Hello " + x + "!")
-pyscript.write('player', "Player: " + x)
+
+
+def set(args):
+    x = input("Please enter your name: ")
+    print("Hello " + x + "!")
+    pyscript.write('player', "Player: " + x)
+
+print("Loaded.")
+
+
     </py-script>|
 
     </body>
