@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <h1>PyScript tests</h1>
+        <h2>Author: Johannes Nicholas</h2>
+        <p id="player">Player: You</p>
+        <br>
+        <button>Set name</button>
+
+    <py-script> 
+x = input("Please enter your name: ")
+print("Hello " + x + "!")
+pyscript.write('player', "Player: " + x)
+    </py-script>|
+
+    </body>
+</html>
