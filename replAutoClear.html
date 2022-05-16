@@ -8,16 +8,14 @@
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   <title>Document</title>
 
-<style>
-    ::selection {
-    color: red;
-    background: yellow;
-  }
-</style>
+
+  <py-env>
+    - numpy
+  </py-env>
 
 </head>
 <body>
-  <py-repl>
+  <py-repl id="pyscript1">
 
 import random
 
@@ -26,6 +24,28 @@ names = ['Python','Javascript','HTML','CSS']
 random.choice(names)
 
   </py-repl>
+
+
+
+
+
+  <script>
+    // Script to clear output after button press
+
+    
+
+    document.onmousedown = myMouseDownHandler;
+
+    function myMouseDownHandler() {
+      console.log("Clearing outputs");
+      outputs = document.getElementsByClassName("output");
+      
+      Array.from(outputs).forEach((element) => {
+        element.innerHTML = "";
+      });
+
+    }
+  </script>
 
   
 </body>
